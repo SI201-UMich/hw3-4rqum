@@ -32,9 +32,9 @@ class CouponDispenser:
         Args:
             coupon_cards (list[str]): list of possible coupons users can receive.
         """
-        self.coupon_cards = coupon_cards 
-        self.customer_roster = []
-        self.issued_indices = []
+        self.coupon_cards = coupon_cards # all possible coupon strings
+        self.customer_roster = [] # names in order of assignment
+        self.issued_indices = [] # indices into coupon_cards aligned to customer_roster
 
     def __str__(self):
         """
@@ -44,9 +44,12 @@ class CouponDispenser:
         Returns:
             str
         """
-        if not self.coupon_cards:
-            return ""
-        return "|".join(self.coupon_cards)
+        if not self.coupon_cards: #if the list is empty
+            return "" #empty string gets returned 
+        
+        return "|".join(self.coupon_cards) #else, we join the list with pipes and return it
+    
+
 
     def issue_coupon(self, name):
         """
@@ -62,8 +65,8 @@ class CouponDispenser:
         Returns:
             str: message as described above
         """
-        # TODO: Implement per instructions
-        pass
+
+        
 
     def distribute_session(self):
         """
