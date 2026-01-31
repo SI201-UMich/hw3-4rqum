@@ -1,12 +1,17 @@
 # Name: Syed-Arqam Ahmad
 # Student ID: 4772 8485
 # Email: aarqam@umich.edu
-# Who or what you worked with on this homework (including generative AI like ChatGPT):
+# Who or what you worked with on this homework (including generative AI like ChatGPT): Google
 # If you worked with generative AI also add a statement for how you used it.
 # e.g.:
 # Asked ChatGPT hints for debugging and suggesting the general structure of the code
+
+# - I used google to look up how to split strings by commas and strip whitespace so that I could correctly parse the user input.
+
 # Did your use of GenAI on this assignment align with your goals and guidelines in 
 #    your Gen AI contract? If not, why?
+
+# - I would say my use of GenAI aligned with my goals and guidelines since i used it to learn new things such as string splitting and parsing, instead of having it create code or solutions for me to understand.
 
 import random
 import io
