@@ -65,7 +65,21 @@ class CouponDispenser:
         Returns:
             str: message as described above
         """
+        #first we should check if the coupon_cards list is empty
+        if not self.coupon_cards: #if it is empty
+            return "The box is empty." #we return the empty box message
+        
+        #next we should check if the name already exists in the roster
+        if name in self.customer_roster: #if it does
+            idx = self.customer_roster.index(name) #get the index of that name
+            coupon_idx = self.issued_indices[idx] #get the corresponding coupon index
+            return self.coupon_cards[coupon_idx] #return the coupon text
 
+        #now we can check the last condition, if the name is new, we assign a random coupon
+        coupon_idx = random.randint(0, len(self.coupon_cards) - 1) #get a random index
+        self.customer_roster.append(name) #now we have our random index, we append the name to the roster
+        self.issued_indices.append(coupon_idx) #append the coupon index to the issued indices
+        return self.coupon_cards[coupon_idx] 
         
 
     def distribute_session(self):
